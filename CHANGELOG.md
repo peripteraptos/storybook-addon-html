@@ -1,3 +1,15 @@
+# v9.0.3 (Sat Nov 08 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix: add bundler.exportEntries to package.json ([@peripteraptos](https://github.com/peripteraptos))
+
+#### Authors: 1
+
+- Ben ([@peripteraptos](https://github.com/peripteraptos))
+
+---
+
 # v9.0.2 (Sat Nov 08 2025)
 
 #### ⚠️ Pushed to `main`
