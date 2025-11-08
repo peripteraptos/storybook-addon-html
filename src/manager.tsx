@@ -9,7 +9,7 @@ addons.register(ADDON_ID, () => {
     type: types.PANEL,
     title: "HTML",
     match: ({ viewMode }) => viewMode === "story",
-    render: ({ active }) => <Panel active={!!active} />,
+    render: ({ active }) => <Panel active={active!} />,
     paramKey: PARAM_KEY,
   });
 });

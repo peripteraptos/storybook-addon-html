@@ -86,6 +86,9 @@
     "registry": "https://npm.pkg.github.com"
   },
   "bundler": {
+    "exportEntries": [
+      "src/index.ts"
+    ],
     "managerEntries": [
       "src/manager.tsx"
     ],
