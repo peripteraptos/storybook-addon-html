@@ -1,3 +1,16 @@
+# v9.0.4 (Sat Nov 08 2025)
+
+#### ⚠️ Pushed to `main`
+
+- removed memo() ([@peripteraptos](https://github.com/peripteraptos))
+- removed setTimeout ([@peripteraptos](https://github.com/peripteraptos))
+
+#### Authors: 1
+
+- Ben ([@peripteraptos](https://github.com/peripteraptos))
+
+---
+
 # v9.0.3 (Sat Nov 08 2025)
 
 #### ⚠️ Pushed to `main`
