@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { useAddonState, useChannel, useParameter } from "storybook/manager-api";
 import { AddonPanel } from "storybook/internal/components";
 import { ADDON_ID, EVENTS, PARAM_KEY } from "../constants";
@@ -8,7 +8,7 @@ interface PanelProps {
   active: boolean;
 }
 
-export const Panel: React.FC<PanelProps> = memo(function Panel(props) {
+export const Panel: React.FC<PanelProps> = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
   const [{ code }, setState] = useAddonState(ADDON_ID, {
     code: "",
@@ -36,4 +36,4 @@ export const Panel: React.FC<PanelProps> = memo(function Panel(props) {
       />
     </AddonPanel>
   );
-});
+};
