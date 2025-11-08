@@ -34,7 +34,8 @@ export const PanelContent: React.FC<PanelContentProps> = ({
       format={true}
       showLineNumbers={showLineNumbers}
       wrapLongLines={wrapLines}
-      children={formattedCode}
-    />
+    >
+      {formattedCode}
+    </SyntaxHighlighter>
   );
 };

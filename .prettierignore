@@ -1,2 +1,5 @@
 dist
 CHANGELOG.md
+pnpm-lock.yaml
+node_modules
+storybook-static
