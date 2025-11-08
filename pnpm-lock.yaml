@@ -9,28 +9,25 @@ importers:
   .:
     devDependencies:
       '@eslint/js':
-        specifier: ^9.36.0
+        specifier: ^9.39.1
         version: 9.39.1
       '@storybook/addon-docs':
         specifier: next
         version: 10.1.0-alpha.7(@types/react@18.3.26)(esbuild@0.25.12)(rollup@4.53.1)(storybook@10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1)))(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1))
-      '@storybook/components':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1)))
       '@storybook/icons':
-        specifier: ^1.4.0
+        specifier: ^1.6.0
         version: 1.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react-vite':
         specifier: next
         version: 10.1.0-alpha.7(esbuild@0.25.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.53.1)(storybook@10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1)))(typescript@5.9.3)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1))
       '@types/node':
-        specifier: ^20
+        specifier: ^20.19.24
         version: 20.19.24
       '@types/react':
-        specifier: ^18.2.65
+        specifier: ^18.3.26
         version: 18.3.26
       '@types/react-dom':
-        specifier: ^18.2.21
+        specifier: ^18.3.7
         version: 18.3.7(@types/react@18.3.26)
       '@vitejs/plugin-react':
         specifier: ^4.7.0
@@ -42,7 +39,7 @@ importers:
         specifier: ^8.0.1
         version: 8.0.1
       eslint:
-        specifier: ^9.36.0
+        specifier: ^9.39.1
         version: 9.39.1
       eslint-config-prettier:
         specifier: ^10.1.8
@@ -66,10 +63,10 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       storybook:
         specifier: next
@@ -81,16 +78,16 @@ importers:
         specifier: ^8.5.0
         version: 8.5.0(postcss@8.5.6)(typescript@5.9.3)(yaml@2.8.1)
       typescript:
-        specifier: ^5.8.3
+        specifier: ^5.9.3
         version: 5.9.3
       typescript-eslint:
-        specifier: ^8.44.1
+        specifier: ^8.46.3
         version: 8.46.3(eslint@9.39.1)(typescript@5.9.3)
       vite:
-        specifier: ^7.0.5
+        specifier: ^7.2.2
         version: 7.2.2(@types/node@20.19.24)(yaml@2.8.1)
       zx:
-        specifier: ^8.7.1
+        specifier: ^8.8.5
         version: 8.8.5
 
 packages:
@@ -674,11 +671,6 @@ packages:
     peerDependencies:
       storybook: ^10.1.0-alpha.7
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0
-
-  '@storybook/components@8.6.14':
-    resolution: {integrity: sha512-HNR2mC5I4Z5ek8kTrVZlIY/B8gJGs5b3XdZPBPBopTIN6U/YHXiDyOjY3JlaS4fSG1fVhp/Qp1TpMn1w/9m1pw==}
-    peerDependencies:
-      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@storybook/csf-plugin@10.1.0-alpha.7':
     resolution: {integrity: sha512-Edhy4P01ENkUT0WTFA+3qkg0QfYIeD17hG+3tBuOlygUkEcuUB5rXTwcj5HCzLqWbFUjT6iM7EZuQZw1NycapA==}
@@ -3596,10 +3588,6 @@ snapshots:
       - esbuild
       - rollup
       - webpack
-
-  '@storybook/components@8.6.14(storybook@10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1)))':
-    dependencies:
-      storybook: 10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1))
 
   '@storybook/csf-plugin@10.1.0-alpha.7(esbuild@0.25.12)(rollup@4.53.1)(storybook@10.1.0-alpha.7(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1)))(vite@7.2.2(@types/node@20.19.24)(yaml@2.8.1))':
     dependencies:
