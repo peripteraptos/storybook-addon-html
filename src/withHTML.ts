@@ -1,10 +1,10 @@
-import { useChannel } from "storybook/internal/preview-api";
+import { useChannel } from "storybook/preview-api";
 import type {
   Renderer,
   PartialStoryFn as StoryFunction,
 } from "storybook/internal/types";
 import { EVENTS } from "./constants";
-import { Parameters } from "./types";
+import { type Parameters } from "./types";
 
 export const withHTML = (
   storyFn: StoryFunction<Renderer>,

@@ -1,21 +1,17 @@
-import React from "react";
-import {
-  useAddonState,
-  useChannel,
-  useParameter,
-} from "storybook/internal/manager-api";
+import React, { memo } from "react";
+import { useAddonState, useChannel, useParameter } from "storybook/manager-api";
 import { AddonPanel } from "storybook/internal/components";
-import { ADDON_ID, EVENTS, PARAM_KEY } from "./constants";
-import { PanelContent } from "./components/PanelContent";
+import { ADDON_ID, EVENTS, PARAM_KEY } from "../constants";
+import { PanelContent } from "./PanelContent";
 
 interface PanelProps {
   active: boolean;
 }
 
-export const Panel: React.FC<PanelProps> = (props) => {
+export const Panel: React.FC<PanelProps> = memo(function Panel(props) {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
   const [{ code }, setState] = useAddonState(ADDON_ID, {
-    code: null,
+    code: "",
   });
 
   // https://storybook.js.org/docs/react/addons/addons-api#usechannel
@@ -28,9 +24,8 @@ export const Panel: React.FC<PanelProps> = (props) => {
   const parameters = useParameter(PARAM_KEY, {
     highlighter: { showLineNumbers: false, wrapLines: true },
   });
-  const {
-    highlighter: { showLineNumbers = false, wrapLines = true } = {},
-  } = parameters;
+  const { highlighter: { showLineNumbers = false, wrapLines = true } = {} } =
+    parameters;
 
   return (
     <AddonPanel {...props}>
@@ -41,4 +36,4 @@ export const Panel: React.FC<PanelProps> = (props) => {
       />
     </AddonPanel>
   );
-};
+});

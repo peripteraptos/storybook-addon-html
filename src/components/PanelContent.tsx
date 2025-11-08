@@ -1,5 +1,8 @@
-import React from "react";
-import { SyntaxHighlighter } from "storybook/internal/components"
+import React, { useEffect } from "react";
+import { SyntaxHighlighter } from "storybook/internal/components";
+
+import PrettierPluginHtml from "prettier/plugins/html";
+import Prettier from "prettier/standalone";
 
 interface PanelContentProps {
   code: string;
@@ -11,15 +14,27 @@ export const PanelContent: React.FC<PanelContentProps> = ({
   code,
   showLineNumbers = false,
   wrapLines = false,
-}) => (
-  <SyntaxHighlighter
-    language={"html"}
-    copyable={true}
-    padded={true}
-    showLineNumbers={showLineNumbers}
-    wrapLongLines={wrapLines}
-    format={"html"}
-  >
-    {code}
-  </SyntaxHighlighter>
-);
+}) => {
+  const [formattedCode, setFormattedCode] = React.useState(code);
+
+  useEffect(() => {
+    Prettier.format(code, {
+      parser: "html",
+      plugins: [PrettierPluginHtml],
+    }).then((formatted) => {
+      setFormattedCode(formatted);
+    });
+  }, [code]);
+
+  return (
+    <SyntaxHighlighter
+      language="html"
+      copyable
+      padded
+      format={true}
+      showLineNumbers={showLineNumbers}
+      wrapLongLines={wrapLines}
+      children={formattedCode}
+    />
+  );
+};
