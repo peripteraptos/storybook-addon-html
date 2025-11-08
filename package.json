@@ -82,7 +82,8 @@
     "storybook": "*"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "bundler": {
     "managerEntries": [
